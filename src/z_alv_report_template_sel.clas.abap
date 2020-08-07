@@ -1,14 +1,21 @@
-CLASS z_alv_report_template_sel DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC
-  GLOBAL FRIENDS z_alv_report_template_data.
+class Z_ALV_REPORT_TEMPLATE_SEL definition
+  public
+  final
+  create public
 
-  PUBLIC SECTION.
-    METHODS constructor IMPORTING i_bukrs TYPE bukrs
-                                  i_usr   TYPE any OPTIONAL
-                        RAISING   cx_static_check.
-    METHODS check_authority_object RAISING cx_static_check.
+  global friends Z_ALV_REPORT_TEMPLATE_DATA .
+
+public section.
+
+  methods CONSTRUCTOR
+    importing
+      !I_BUKRS type BUKRS
+      !I_USR type ANY optional
+    raising
+      CX_STATIC_CHECK .
+  methods CHECK_AUTHORITY_OBJECT
+    raising
+      CX_STATIC_CHECK .
   PROTECTED SECTION.
   PRIVATE SECTION.
 
@@ -21,16 +28,8 @@ ENDCLASS.
 
 
 
-CLASS z_alv_report_template_sel IMPLEMENTATION.
-  METHOD constructor.
-    m_bukrs = i_bukrs.
+CLASS Z_ALV_REPORT_TEMPLATE_SEL IMPLEMENTATION.
 
-    IF i_usr IS SUPPLIED.
-      mr_usr = CONV #( i_usr ).
-    ENDIF.
-
-
-  ENDMETHOD.
 
   METHOD check_authority_object.
 
@@ -40,4 +39,14 @@ CLASS z_alv_report_template_sel IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
+  METHOD constructor.
+    m_bukrs = i_bukrs.
+
+    IF i_usr IS SUPPLIED.
+      mr_usr = CONV #( i_usr ).
+    ENDIF.
+
+
+  ENDMETHOD.
 ENDCLASS.

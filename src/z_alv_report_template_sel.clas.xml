@@ -5,7 +5,7 @@
    <VSEOCLASS>
     <CLSNAME>Z_ALV_REPORT_TEMPLATE_SEL</CLSNAME>
     <LANGU>R</LANGU>
-    <DESCRIPT>Отчет по договорам банковской гарантии (опции выбора)</DESCRIPT>
+    <DESCRIPT>select option processing</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

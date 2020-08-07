@@ -5,7 +5,7 @@
    <VSEOCLASS>
     <CLSNAME>Z_ALV_REPORT_TEMPLATE_DATA</CLSNAME>
     <LANGU>R</LANGU>
-    <DESCRIPT>Выбор данных в отчет по договорам банковской гарантии</DESCRIPT>
+    <DESCRIPT>data selection</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
